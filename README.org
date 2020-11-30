@@ -25,10 +25,11 @@
 * helm-mini
 
   I usually tend to squeeze everything into my =helm-mini=. This package
-  provides 2 sources,
+  provides 3 sources,
 
   - =hosb-posts-source= is the helm source for posts.
   - =hosb-drafts-source= is the helm source for drafts.
+  - =hosb-commands-source= is the helm source for =org-static-blog= commands.
 
   You can add them to your =helm-mini= like so,
 

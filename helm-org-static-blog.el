@@ -59,11 +59,17 @@
 		  ("Publish" . hosb-unpublish))
 	:persistent-action 'hosb-find-draft))
 
+(setq hosb-commands-source
+      (helm-build-sync-source "Commands"
+	:candidates '(org-static-blog-publish org-static-blog-clean)
+	:persistent-action (lambda (c) (funcall (intern-soft c)))))
+
 ;;;###autoload
 (defun helm-org-static-blog ()
   (interactive)
   (helm :sources '(hosb-posts-source
-		   hosb-drafts-source)
+		   hosb-drafts-source
+		   hosb-commands-source)
 	:buffer "*helm-org-static-blog*"))
 
 (provide 'helm-org-static-blog)
