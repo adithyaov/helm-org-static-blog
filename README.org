@@ -46,5 +46,5 @@
 
 * License
 
-  This packaged is covered under MIT License. Please see the LICENSE in this
-  directory for more info.
+  This package is covered under the MIT License. Please see the LICENSE file in
+  this directory for more info.
