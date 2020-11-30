@@ -39,8 +39,10 @@
 
 * Credits
 
-  Many thanks to [[https://github.com/bastibe][Bastian Bechtold (bastibe)]] for creating such a simple and elegant
-  static site generator.
+  - Many thanks to [[https://github.com/bastibe][Bastian Bechtold (bastibe)]] for creating [[https://github.com/bastibe/org-static-blog][org-static-blog]], a simple and elegant
+    static site generator.
+  - The creators of [[https://github.com/emacs-helm/helm][helm]] have my sincere gratitude for such a beautiful
+    framework. Here is the [[https://github.com/emacs-helm/helm/graphs/contributors][list of contributors]].
 
 * License
 
