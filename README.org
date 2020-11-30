@@ -1,0 +1,48 @@
+#+TITLE: HELM-ORG-STATIC-BLOG
+
+* Commentary
+
+  This package works as an accessory to [[https://github.com/bastibe/org-static-blog][org-static-blog]].
+
+  This is simple (primitive) package to manage the posts and drafts defined by
+  variables in org-static-blog configuration.
+
+  No additional configuration is needed. This package will work properly if
+  =org-static-blog= is configured properly.
+
+  =helm-org-static-blog= is an interactive function that will bring up a helm
+  buffer that displays your posts and drafts. The default action on =C-j= or
+  =RET= is to open the file.
+
+  The accompanying action for posts is =Unpublish= which basically moves the
+  post from =org-static-blog-posts-directory= to
+  =org-static-blog-drafts-directory= and runs =org-static-blog-publish=.
+
+  The accompanying action for drafts is =Publish= which, as expected, moves the
+  draft from =org-static-blog-drafts-directory= to
+  =org-static-blog-posts-directory= and runs =org-static-blog-publish=.
+
+* helm-mini
+
+  I usually tend to squeeze everything into my =helm-mini=. This package
+  provides 2 sources,
+
+  - =hosb-posts-source= is the helm source for posts.
+  - =hosb-drafts-source= is the helm source for drafts.
+
+  You can add them to your =helm-mini= like so,
+
+  #+BEGIN_SRC elisp :results silent
+    (add-to-list 'helm-mini-default-sources 'hosb-posts-source 'append)
+    (add-to-list 'helm-mini-default-sources 'hosb-drafts-source 'append)
+  #+END_SRC
+
+* Credits
+
+  Many thanks to [[https://github.com/bastibe][Bastian Bechtold (bastibe)]] for creating such a simple and elegant
+  static site generator.
+
+* License
+
+  This packaged is covered under MIT License. Please see the LICENSE in this
+  directory for more info.
